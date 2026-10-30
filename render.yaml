@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: royal-discord-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
